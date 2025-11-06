@@ -1,4 +1,4 @@
-import { Separator } from '@/components/ui/separator';
+import { Block } from '@/components/ui/block';
 
 type ExperienceProps = {
 	blocks: {
@@ -15,13 +15,7 @@ type ExperienceProps = {
 
 export const Experience = ({ blocks }: ExperienceProps) => {
 	return (
-		<div className='flex flex-col items-center gap-4'>
-			<div className='w-full'>
-				<p className='text-xl font-semibold text-center'>
-					Professional Experience
-				</p>
-				<Separator orientation='horizontal' className='border' />
-			</div>
+		<Block title='Professional Experience'>
 			{blocks.map((block) => (
 				<div key={block.id} className='w-full flex flex-col gap-2'>
 					<div className='w-full flex flex-row justify-between'>
@@ -48,7 +42,7 @@ export const Experience = ({ blocks }: ExperienceProps) => {
 							</p>
 						</div>
 					</div>
-					<div className='px-8'>
+					<div className='mx-8'>
 						<ul className='list-disc'>
 							{block.responsabilities.map((item) => (
 								<li key={item}>{item}</li>
@@ -57,6 +51,6 @@ export const Experience = ({ blocks }: ExperienceProps) => {
 					</div>
 				</div>
 			))}
-		</div>
+		</Block>
 	);
 };

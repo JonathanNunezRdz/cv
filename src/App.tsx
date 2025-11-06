@@ -1,13 +1,15 @@
+import { Certifications } from '@/components/certifications/certifications';
 import { Education } from '@/components/education/education';
 import { Experience } from '@/components/experience/experience';
 import { TechnicalSkills } from '@/components/skills/technical-skills';
+import { Block } from '@/components/ui/block';
 
 function App() {
 	return (
 		<div className='flex flex-col gap-4 max-w-[1000px] mx-auto p-4'>
 			{/* <div className='h-28 w-full' /> */}
 			<div className='flex flex-col items-center'>
-				<p className='text-xl font-semibold'>Jonathan Andre Nunez Rodriguez</p>
+				<p className='text-xl font-semibold'>Jonathan André Núñez Rodríguez</p>
 				<div className='flex flex-row gap-2'>
 					<a href='mailto:jonathannunezr1@gmail.com'>
 						jonathannunezr1@gmail.com
@@ -36,13 +38,16 @@ function App() {
 					'ReactJS',
 					'NextJS',
 					'NestJS',
+					'AngularJS',
 					'PostgreSQL',
 					'MySQL',
+					'MQTT',
+					'Websockets',
 					'Git',
 					'Devops',
 					'Docker',
 					'Python',
-					'bash/zsh',
+					'Unix',
 				]}
 			/>
 
@@ -103,6 +108,35 @@ function App() {
 					},
 				]}
 			/>
+
+			<Certifications
+				blocks={[
+					{
+						id: 'german',
+						title: 'Goethe-Institut German A1',
+						date: new Date('2016-07-23T16:30:00.000Z'),
+					},
+					{
+						id: 'toefl',
+						title: 'TOEFL ITP 630pts',
+						date: new Date('2023-03-10T17:00:00.000Z'),
+					},
+				]}
+			/>
+
+			<Block title='Career Objective'>
+				<p>
+					Junior fullstack developer with strong problem solving skills and
+					critical thinking, seeking a software engineer role. Thrilled to put
+					to good use of my high proficiency skills in the Javascript ecosystem
+					and/or learn new technologies to build and maintain systems and help
+					me grow as an engineer. Looking forward to work in a team, learning
+					how best to collaborate and assist others who might need help. Always
+					trying to learn the newest practices and technologies through side
+					projects. Very creative way of thinking and curious to know how things
+					work. High curiosity in network engineering.
+				</p>
+			</Block>
 		</div>
 	);
 }
