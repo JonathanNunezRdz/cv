@@ -12,7 +12,7 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"includes": ["./src/**/*.ts", "./src/**/*.tsx"]
+		"includes": ["./src/**/*.ts", "./src/**/*.tsx", "vite.config.ts"]
 	},
 	"formatter": {
 		"enabled": true,
